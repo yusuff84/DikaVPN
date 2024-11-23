@@ -1,0 +1,3 @@
+yookassa==3.3.0
+yookassa-async==0.1.5
+YooMoney-async==0.0.6
