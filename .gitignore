@@ -4882,10 +4882,6 @@ myenv/Scripts/pybabel.exe
 myenv/Scripts/python.exe
 myenv/Scripts/pythonw.exe
 myenv/Scripts/qr.exe
-utils/__init__.py
-utils/d.db
-utils/db.db
-utils/variable.py
 utils/__pycache__/__init__.cpython-37.pyc
 utils/__pycache__/__init__.cpython-39.pyc
 utils/__pycache__/__init__.cpython-310.pyc
