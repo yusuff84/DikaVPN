@@ -116,9 +116,9 @@ kb_backstst.add(backbtnstst)
 
 kb_select_amount = types.InlineKeyboardMarkup(row_width=3)
 kb_select_amount.add(
-    types.InlineKeyboardButton(text="149 руб.", callback_data="amount_149"),
-    types.InlineKeyboardButton(text="339 руб.", callback_data="amount_339"),
-    types.InlineKeyboardButton(text="1139 руб.", callback_data="amount_1139")
+    types.InlineKeyboardButton(text="80 руб.", callback_data="amount_79"),
+    types.InlineKeyboardButton(text="229 руб.", callback_data="amount_229"),
+    types.InlineKeyboardButton(text="900 руб.", callback_data="amount_899")
 )
 kb_select_amount.add(
     types.InlineKeyboardButton(text="Ввести вручную", callback_data="amount_manual"),
