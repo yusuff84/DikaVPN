@@ -71,9 +71,9 @@ backbtns = types.InlineKeyboardButton(text="ГЛАВНАЯ ◀️",callback_data
 kb_instss.add(kis1s,kis2s,kis3s,kis5s).row(backbtns)
 
 kb_tarif = types.InlineKeyboardMarkup(row_width=1)
-kt1 = types.InlineKeyboardButton(text="📆 1 МЕСЯЦ - 149",callback_data="t1")
-kt2 = types.InlineKeyboardButton(text="📆 3 МЕСЯЦА - 339",callback_data="t2")
-kt4 = types.InlineKeyboardButton(text="📆 ГОД - 1139",callback_data="t4")
+kt1 = types.InlineKeyboardButton(text="📆 1 МЕСЯЦ - 79",callback_data="t1")
+kt2 = types.InlineKeyboardButton(text="📆 3 МЕСЯЦА - 229",callback_data="t2")
+kt4 = types.InlineKeyboardButton(text="📆 ГОД - 899",callback_data="t4")
 backbtn = types.InlineKeyboardButton(text="НАЗАД ◀️",callback_data="backst")
 kb_tarif.add(kt1,kt2,kt4,backbtn)
 
@@ -116,9 +116,9 @@ kb_backstst.add(backbtnstst)
 
 kb_select_amount = types.InlineKeyboardMarkup(row_width=3)
 kb_select_amount.add(
-    types.InlineKeyboardButton(text="80 руб.", callback_data="amount_79"),
+    types.InlineKeyboardButton(text="79 руб.", callback_data="amount_79"),
     types.InlineKeyboardButton(text="229 руб.", callback_data="amount_229"),
-    types.InlineKeyboardButton(text="900 руб.", callback_data="amount_899")
+    types.InlineKeyboardButton(text="899 руб.", callback_data="amount_899")
 )
 kb_select_amount.add(
     types.InlineKeyboardButton(text="Ввести вручную", callback_data="amount_manual"),

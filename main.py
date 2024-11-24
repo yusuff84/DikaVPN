@@ -692,9 +692,9 @@ async def print_all_commands(call: types.CallbackQuery):
             day = await listall(ip, session, a)
             if day != None:
                 kb_prodlenye = types.InlineKeyboardMarkup(row_width=1)
-                kp1 = types.InlineKeyboardButton(text="📆 1 МЕСЯЦ - 149",callback_data=f"t1_{a}")
-                kp2 = types.InlineKeyboardButton(text="📆 3 МЕСЯЦА - 339",callback_data=f"t2_{a}")
-                kp4 = types.InlineKeyboardButton(text="📆 ГОД - 1139",callback_data=f"t4_{a}")
+                kp1 = types.InlineKeyboardButton(text="📆 1 МЕСЯЦ - 79",callback_data=f"t1_{a}")
+                kp2 = types.InlineKeyboardButton(text="📆 3 МЕСЯЦА - 229",callback_data=f"t2_{a}")
+                kp4 = types.InlineKeyboardButton(text="📆 ГОД - 899",callback_data=f"t4_{a}")
                 backbtn = types.InlineKeyboardButton(text="НАЗАД ◀️",callback_data="backst")
                 kb_prodlenye.add(kp1,kp2,kp4,backbtn)
                 await bot.edit_message_caption(chat_id=call.message.chat.id, message_id=call.message.message_id,caption = f"Активно до {day}\nПродление доступно по кнопкам ниже",reply_markup=kb_prodlenye,parse_mode="html")
@@ -787,10 +787,10 @@ async def print_all_commands(call: types.CallbackQuery):
         await bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id,text=f"АДМИН ПАНЕЛЬ\n\nВСЕГО КОНФИГОВ {a}",reply_markup=kb_admin_panel)
     elif call.data == "t1":
         
-        a = checkbal(call.message.chat.id, 149)
+        a = checkbal(call.message.chat.id, 79)
         
         if a:
-            minbal(call.message.chat.id,149)
+            minbal(call.message.chat.id,79)
             unoxxx = print_and_convert_to_unix(30)
             mail = generate_key()
             url,session = await add_client_request(call.message.chat.id,mail,unoxxx)
@@ -805,10 +805,10 @@ async def print_all_commands(call: types.CallbackQuery):
 
     elif call.data == "t2":
         
-        a = checkbal(call.message.chat.id, 339)
+        a = checkbal(call.message.chat.id, 229)
         
         if a:
-            minbal(call.message.chat.id,339)
+            minbal(call.message.chat.id,229)
             unoxxx = print_and_convert_to_unix(90)
             mail = generate_key()
             url,session = await add_client_request(call.message.chat.id,mail,unoxxx)
@@ -822,10 +822,10 @@ async def print_all_commands(call: types.CallbackQuery):
         
     elif call.data == "t3":
         
-        a = checkbal(call.message.chat.id, 619)
+        a = checkbal(call.message.chat.id, 899)
         
         if a:
-            minbal(call.message.chat.id,619)
+            minbal(call.message.chat.id,899)
             unoxxx = print_and_convert_to_unix(180)
             mail = generate_key()
             url,session = await add_client_request(call.message.chat.id,mail,unoxxx)
@@ -839,10 +839,10 @@ async def print_all_commands(call: types.CallbackQuery):
         
     elif call.data == "t4":
         
-        a = checkbal(call.message.chat.id, 1139)
+        a = checkbal(call.message.chat.id, 899)
         
         if a:
-            minbal(call.message.chat.id,1139)
+            minbal(call.message.chat.id,899)
             unoxxx = print_and_convert_to_unix(365)
             mail = generate_key()
             url,session = await add_client_request(call.message.chat.id,mail,unoxxx)
