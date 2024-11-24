@@ -467,7 +467,7 @@ async def add_client_request(client_id,mail,time):
         
     }
     print(url)
-    finurl = f"http://{url}:22054/panel/inbound/addClient"
+    finurl = f"http://{url}:2053/panel/inbound/addClient"
     # Отправка POST-запроса
     response = requests.post(finurl, headers=headers, json=payload)
     print(response.text)
@@ -507,7 +507,7 @@ async def testcfgonweek(client_id,mail):
         
     }
     print(url)
-    finurl = f"http://{url}:22054/panel/inbound/addClient"
+    finurl = f"http://{url}:2053/panel/inbound/addClient"
     # Отправка POST-запроса
     response = requests.post(finurl, headers=headers, json=payload)
     print(response.text)
@@ -578,7 +578,7 @@ def getipbymail(mail):
 
 async def listall(ip, session, email):
     # Формируем URL для получения данных
-    url = f"http://{ip}:22054/panel/api/inbounds/list"
+    url = f"http://{ip}:2053/panel/api/inbounds/list"
 
     # Заголовки для запроса
     headers = {
@@ -645,11 +645,11 @@ async def takeip():
     print(a)
     for i in a:
         
-        url1 = f"http://{i[0]}:22054/login"
+        url1 = f"http://{i[0]}:2053/login"
 
         session =f"3x-ui={await sessionid(url1)}" 
    
-        url = f"http://{i[0]}:22054/panel/api/inbounds/list"
+        url = f"http://{i[0]}:2053/panel/api/inbounds/list"
         # Заголовки для запроса
         headers = {
             "Accept": "application/json",
@@ -707,7 +707,7 @@ def createcfgbymail(url,session_id,mail):
         "Accept": "application/json",
         "Cookie": f"lang=ru-RU; {session_id}"
     }
-    finurl = f"http://{url}:22054/panel/inbound/list"
+    finurl = f"http://{url}:2053/panel/inbound/list"
     # Отправка POST-запроса
     response = requests.post(finurl, headers=headers)
     # Проверяем, что ответ возвращается в формате JSON
@@ -771,7 +771,7 @@ def construatecfg(mail_sender,session,ip,id,val):
         "Accept": "application/json",
         "Cookie": f"lang=ru-RU; 3x-ui={session}"
     }
-    finurl = f"http://{ip}:22054/panel/inbound/list"
+    finurl = f"http://{ip}:2053/panel/inbound/list"
     # Отправка POST-запроса
     response = requests.post(finurl, headers=headers)
     # Выполнение GET-запроса
@@ -813,7 +813,7 @@ def construatecfg(mail_sender,session,ip,id,val):
 
                         ext = client.get("expiryTime")
                         # Выводим переменные для проверки
-                        url = f"http://{ip}:22054/panel/inbound/updateClient/{id}_{mail_sender}"
+                        url = f"http://{ip}:2053/panel/inbound/updateClient/{id}_{mail_sender}"
                         print(url,session)
                         # Сессионные куки
                         cookies = {
