@@ -909,7 +909,7 @@ async def print_all_commands(call: types.CallbackQuery):
         await bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="<b>4</b>",reply_markup=kb_backststttttt,parse_mode="html")
     
     elif call.data == "tarifs":
-        await bot.edit_message_caption(chat_id=call.message.chat.id, message_id=call.message.message_id, caption="<b>🗒 ТАРИФНЫЙ ПЛАН 🗒\n\n1 МЕСЯЦ - 149р\n\n3 МЕСЯЦА - 339р\n\nПОЛ ГОДА - 619р\n\nГОД - 1139р</b>",reply_markup=kb_back,parse_mode="html")
+        await bot.edit_message_caption(chat_id=call.message.chat.id, message_id=call.message.message_id, caption="<b>🗒 ТАРИФНЫЙ ПЛАН 🗒\n\n1 МЕСЯЦ - 79р\n\n3 МЕСЯЦА - 229р\n\nГОД - 899р</b>",reply_markup=kb_back,parse_mode="html")
 
     elif call.data == "startphoto":
         await bot.send_photo(chat_id=call.message.chat.id, photo=open('start.png','rb'),caption="<b>👋 Привет! Рады приветствовать вас в нашей VPN-семье!\n\nТеперь вы можете наслаждаться безопасным и свободным доступом к интернету без ограничений.\n\n🚀 Наши серверы обеспечивают высокую скорость и надежность, а ваша конфиденциальность всегда будет под защитой. </b>",reply_markup=keyboard_start,parse_mode="html")
@@ -936,19 +936,19 @@ async def print_all_commands(call: types.CallbackQuery):
             mail = call.data.split('_')[1]
             a = getbalance(call.message.chat.id)
             kb_prodlenye = types.InlineKeyboardMarkup(row_width=2)
-            kp1 = types.InlineKeyboardButton(text="📆 1 МЕСЯЦ - 149",callback_data=f"t1_{mail}")
-            kp2 = types.InlineKeyboardButton(text="📆 3 МЕСЯЦА - 339",callback_data=f"t2_{mail}")
-            kp3 = types.InlineKeyboardButton(text="📆 ПОЛГОДА - 619",callback_data=f"t3_{mail}")
-            kp4 = types.InlineKeyboardButton(text="📆 ГОД - 1139",callback_data=f"t4_{mail}")
+            kp1 = types.InlineKeyboardButton(text="📆 1 МЕСЯЦ - 79",callback_data=f"t1_{mail}")
+            kp2 = types.InlineKeyboardButton(text="📆 3 МЕСЯЦА - 229",callback_data=f"t2_{mail}")
+            kp3 = types.InlineKeyboardButton(text="📆 ПОЛГОДА - 459",callback_data=f"t3_{mail}")
+            kp4 = types.InlineKeyboardButton(text="📆 ГОД - 899",callback_data=f"t4_{mail}")
             backbtn = types.InlineKeyboardButton(text="НАЗАД ◀️",callback_data="backst")
             kb_prodlenye.add(kp1,kp2,kp3,kp4,backbtn)
             await bot.edit_message_caption(chat_id=call.message.chat.id, message_id=call.message.message_id, caption=f"Выберете срок продления по конфигурации {mail}\n\nВаш баланс {a}",reply_markup=kb_prodlenye)
         elif call.data.startswith("t1_"):
             mail = call.data.split('_')[1]
 
-            a = checkbal(call.message.chat.id, 149)
+            a = checkbal(call.message.chat.id, 79)
             if a:
-                minbal(call.message.chat.id,149)
+                minbal(call.message.chat.id,79)
                 unoxxx = print_and_convert_to_unix(30)
                 url = getipbymail(mail)
                 print(url)
@@ -967,9 +967,9 @@ async def print_all_commands(call: types.CallbackQuery):
         elif call.data.startswith("t2_"):
             mail = call.data.split('_')[1]
 
-            a = checkbal(call.message.chat.id, 339)
+            a = checkbal(call.message.chat.id, 229)
             if a:
-                minbal(call.message.chat.id,339)
+                minbal(call.message.chat.id,229)
                 unoxxx = print_and_convert_to_unix(90)
                 url = getipbymail(mail)
                 
@@ -988,9 +988,9 @@ async def print_all_commands(call: types.CallbackQuery):
         elif call.data.startswith("t3_"):
             mail = call.data.split('_')[1]
 
-            a = checkbal(call.message.chat.id, 619)
+            a = checkbal(call.message.chat.id, 459)
             if a:
-                minbal(call.message.chat.id,619)
+                minbal(call.message.chat.id,459)
                 unoxxx = print_and_convert_to_unix(180)
                 url = getipbymail(mail)
                 print(url)
@@ -1008,9 +1008,9 @@ async def print_all_commands(call: types.CallbackQuery):
         elif call.data.startswith("t4_"):
             mail = call.data.split('_')[1]
 
-            a = checkbal(call.message.chat.id, 1139)
+            a = checkbal(call.message.chat.id, 899)
             if a:
-                minbal(call.message.chat.id,1139)
+                minbal(call.message.chat.id,899)
                 unoxxx = print_and_convert_to_unix(365)
                 url = getipbymail(mail)
                 print(url)

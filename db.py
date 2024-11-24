@@ -175,14 +175,33 @@ def addrefbal(id,val):
     cur.execute("UPDATE list SET refbal = ? WHERE id = ? ",(val+a,id))
     con.commit()
     con.close()
+# def refbala(id):
+#     con = sqlite3.connect("db.db")
+#     cur = con.cursor()
+#     list = cur.execute(f"SELECT refbal FROM list WHERE id = {id}").fetchone()[0]
+#     con.commit()
+#     con.close()
+#     return(list)
+
 def refbala(id):
+    # Проверка валидности ID
+    if not id or not str(id).isdigit():
+        raise ValueError("Invalid ID provided")
+
     con = sqlite3.connect("db.db")
     cur = con.cursor()
-    list = cur.execute(f"SELECT refbal FROM list WHERE id = {id}").fetchone()[0]
+
+    # Использование параметризованного запроса
+    result = cur.execute("SELECT refbal FROM list WHERE id = ?", (id,)).fetchone()
+
     con.commit()
     con.close()
-    return(list)
 
+    # Проверка, если запись не найдена
+    if result is None:
+        raise ValueError(f"No record found for ID: {id}")
+    
+    return result[0]  # Возврат значения
 
 def minref(id,val):
     con = sqlite3.connect("db.db")
