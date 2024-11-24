@@ -63,10 +63,10 @@ backbtns = types.InlineKeyboardButton(text="ГЛАВНАЯ ◀️",callback_data
 kb_help.add(kh1,kh2,backbtns)
 
 kb_instss = types.InlineKeyboardMarkup(row_width=2)
-kis1s = types.InlineKeyboardButton(text="🍏 IOS",url="https://teletype.in/@flashvpn/Ios")
-kis2s = types.InlineKeyboardButton(text="🤖 ANDROID",url="https://teletype.in/@flashvpn/Android")
-kis3s = types.InlineKeyboardButton(text="🪟 WINDOWS",url="https://teletype.in/@flashvpn/Windows")
-kis5s = types.InlineKeyboardButton(text="💻 MacOS",url="https://teletype.in/@flashvpn/MacOs")
+kis1s = types.InlineKeyboardButton(text="🍏 IOS",url="https://telegra.ph/IOS-Nastrojka-11-24-3")
+kis2s = types.InlineKeyboardButton(text="🤖 ANDROID",url="https://telegra.ph/Android-Nastrojka-11-24")
+kis3s = types.InlineKeyboardButton(text="🪟 WINDOWS",url="https://telegra.ph/Windows-nastrojka-11-24")
+kis5s = types.InlineKeyboardButton(text="💻 MacOS",url="https://telegra.ph/MacOs-Nastrojka-11-24")
 backbtns = types.InlineKeyboardButton(text="ГЛАВНАЯ ◀️",callback_data="backsts_1")
 kb_instss.add(kis1s,kis2s,kis3s,kis5s).row(backbtns)
 
